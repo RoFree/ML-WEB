@@ -17,7 +17,7 @@ function setup() {
   noCanvas();
 
   // Create the charRNN generator passing it the model directory
-  charRNN = ml5.charRNN('religious/', modelReady);
+  charRNN = ml5.charRNN('useragree/', modelReady);
 
   // Grab the DOM elements
   textInput = select('#textInput');
