@@ -49,6 +49,7 @@ function detect() {
     yo = yo+1;
     if(yo == 20){
     localStorage.setItem("log", results)
+    window.location.assign("webstorage.html");
     }
     detect();
   });
