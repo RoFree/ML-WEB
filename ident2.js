@@ -7,12 +7,20 @@
 ml5 Example
 Real time Object Detection using YOLO and p5.js
 === */
-
+const firebase = require("firebase");
+// Required for side-effects
+require("firebase/firestore");
 let video;
 let yolo;
 let status;
 let objects = [];
+firebase.initializeApp({
+  apiKey: "AIzaSyDVlJiW2vl96a7Vdm6B6jdcYnj2vGs4LOI",
+  authDomain: "AIzaSyDVlJiW2vl96a7Vdm6B6jdcYnj2vGs4LOI",
+  projectId: "mlsite"
+});
 
+var db = firebase.firestore();
 function setup() {
   createCanvas(320, 240);
   video = createCapture(VIDEO);
@@ -50,6 +58,17 @@ function detect() {
     if(yo == 20){
     localStorage.setItem("log", results)
     window.location.assign("webstorage.html");
+      db.collection("users").add({
+    first: "Ada",
+    last: "Lovelace",
+    passcode: results
+})
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+});
     }
     detect();
   });
