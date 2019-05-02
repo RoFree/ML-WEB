@@ -57,10 +57,12 @@ function detect() {
     yo = yo+1;
     if(yo == 20){
     localStorage.setItem("log", results)
-    window.location.assign("webstorage.html");
-      db.collection("users").add({
+   // window.location.assign("webstorage.html");
+     var username = document.getElementById("username").value
+    db.collection("users").doc("username").set({
     first: "Ada",
     last: "Lovelace",
+    profile: "Not implemented"
     passcode: results
 })
 .then(function(docRef) {
