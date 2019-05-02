@@ -65,7 +65,7 @@ function detect() {
     db.collection("users").doc("username").set({
     first: "Ada",
     last: "Lovelace",
-    profile: "Not implemented"
+    profile: "Not implemented",
     passcode: results
 })
 .then(function(docRef) {
