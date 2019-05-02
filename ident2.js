@@ -18,7 +18,7 @@ firebase.initializeApp({
   apiKey: "AIzaSyDVlJiW2vl96a7Vdm6B6jdcYnj2vGs4LOI",
   authDomain: "AIzaSyDVlJiW2vl96a7Vdm6B6jdcYnj2vGs4LOI",
   projectId: "mlsite"
-  console.log("staged")
+
 });
 
 var db = firebase.firestore();
@@ -29,14 +29,14 @@ function setup() {
 console.log("staged")
   // Create a YOLO method
   yolo = ml5.YOLO(video, startDetecting);
-console.log("staged")
+
   // Hide the original video
   video.hide();
   status = select('#status');
 }
 
 function draw() {
-  console.log("staged")
+
   image(video, 0, 0, width, height);
   for (let i = 0; i < objects.length; i++) {
     noStroke();
@@ -46,7 +46,7 @@ function draw() {
     strokeWeight(4);
     stroke(0, 255, 0);
     rect(objects[i].x * width, objects[i].y * height, objects[i].w * width, objects[i].h * height);
-    console.log("staged")
+
   }
 }
 
