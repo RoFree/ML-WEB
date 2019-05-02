@@ -12,7 +12,7 @@ let video;
 let yolo;
 let status;
 let objects = [];
-
+var check = "null"
 function setup() {
   createCanvas(320, 240);
   video = createCapture(VIDEO);
@@ -47,9 +47,20 @@ function startDetecting() {
 function detect() {
   yolo.detect(function(err, results) {
     objects = results;
-    if (localStorage.getItem("log") == results){
-      window.location.assign("secret.html");
+    db.collection("users").doc("test").get().then(function(doc) {
+    if (doc.exists) {
+        console.log("Document data:", doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
     }
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});
+    check = 
+   // if (localStorage.getItem("log") == results){
+   //   window.location.assign("secret.html");
+   // }
     detect();
   });
 }
