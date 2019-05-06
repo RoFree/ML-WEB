@@ -8,6 +8,7 @@ ml5 Example
 Real time Object Detection using YOLO and p5.js
 === */
 
+var db = firebase.firestore();
 let video;
 let yolo;
 let status;
