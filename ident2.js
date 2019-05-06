@@ -44,7 +44,7 @@ console.log("staged")
   video.hide();
   status = select('#status');
 }
-
+/*
 function draw() {
 
   image(video, 0, 0, width, height);
@@ -59,7 +59,7 @@ function draw() {
 
   }
 }
-
+*/
 function startDetecting() {
   status.html('Model loaded!');
 }
