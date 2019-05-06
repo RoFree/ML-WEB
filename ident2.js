@@ -8,18 +8,6 @@ ml5 Example
 Real time Object Detection using YOLO and p5.js
 === */
 //v3
-var config = {
-    apiKey: "AIzaSyDVlJiW2vl96a7Vdm6B6jdcYnj2vGs4LOI",
-    authDomain: "mlsite.firebaseapp.com",
-    databaseURL: "https://mlsite.firebaseio.com",
-    projectId: "mlsite",
-    storageBucket: "mlsite.appspot.com",
-    messagingSenderId: "246635924738"
-  };
-  firebase.initializeApp(config);
-const firebase = require("firebase");
-// Required for side-effects
-require("firebase/firestore");
 var db = firebase.firestore();
 let video;
 let yolo;
