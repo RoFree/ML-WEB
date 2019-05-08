@@ -13,12 +13,6 @@ let video;
 let yolo;
 let status;
 let objects = [];
-firebase.initializeApp({
-  apiKey: "AIzaSyDVlJiW2vl96a7Vdm6B6jdcYnj2vGs4LOI",
-  authDomain: "AIzaSyDVlJiW2vl96a7Vdm6B6jdcYnj2vGs4LOI",
-  projectId: "mlsite"
-
-});
 
 var db = firebase.firestore();
 function setup() {
