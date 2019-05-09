@@ -14,7 +14,6 @@ let yolo;
 let status;
 let objects = [];
 
-var db = firebase.firestore();
 function setup() {
   createCanvas(320, 240);
   video = createCapture(VIDEO);
@@ -48,10 +47,13 @@ function startDetecting() {
 }
 var yo = 0;
 function detect() {
+  console.log("staged2")
   yolo.detect(function(err, results) {
+    console.log("staged3")
     objects = results;
     yo = yo+1;
     if(yo == 20){
+      console.log("staged4")
     localStorage.setItem("log", results)
    // window.location.assign("webstorage.html");
      var username = document.getElementById("username").value
