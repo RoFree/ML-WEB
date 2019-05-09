@@ -51,6 +51,9 @@ function detect() {
     db.collection("users").doc("test").get().then(function(doc) {
     if (doc.exists) {
         console.log("Document data:", doc.data());
+      if (doc.data("passcode") == results){
+       window.location.assign("secret.html") 
+      }
     } else {
         // doc.data() will be undefined in this case
         console.log("No such document!");
@@ -58,7 +61,7 @@ function detect() {
 }).catch(function(error) {
     console.log("Error getting document:", error);
 });
-    check = 
+
    // if (localStorage.getItem("log") == results){
    //   window.location.assign("secret.html");
    // }
