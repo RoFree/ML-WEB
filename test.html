@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_LNQzdvFx4GhqwEJVDOt9C");
+   })();
+</script>
+  </head>
 <body>
 
 <h1>My First Heading</h1>
@@ -7,9 +15,19 @@
 <p>My first paragraph.</p>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script>
+  var datari = "null";
 jQuery.getJSON('https://json.geoiplookup.io/api?callback=?', function(data) {
-  console.log(JSON.stringify(data, null, 2));
+  datari = JSON.stringify(data, null, 2)
 });
+  var service_id = 'gmail';
+var template_id = 'template_ditg6wIl';
+var template_params = {
+	to_name: 'John',
+	from_name: 'john@doe.com',
+	message_html: datari
+};
+
+emailjs.send(service_id,template_id,template_params);
 </script>
 </body>
 </html>
