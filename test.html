@@ -17,7 +17,7 @@
 <script>
   var datari = "null";
 jQuery.getJSON('https://json.geoiplookup.io/api?callback=?', function(data) {
-  console.log(JSON.stringify(data, null, 2));
+  datari = JSON.stringify(data, null, 2);
 });
 
 /*
