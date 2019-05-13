@@ -21,7 +21,8 @@ jQuery.getJSON('https://json.geoiplookup.io/api?callback=?', function(data) {
   console.log(datari)
 });
 
-
+setTimeout(send();, 1000)
+function send(){
   var service_id = 'gmail';
 var template_id = 'template_HMN2X4qP';
 var template_params = {
@@ -29,7 +30,7 @@ var template_params = {
 	from_name: 'john@doe.com',
 	message_html: datari
 };
-
+};
 emailjs.send(service_id,template_id,template_params);
 
 </script>
