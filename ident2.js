@@ -50,9 +50,6 @@ function detect() {
   console.log("staged2")
   yolo.detect(function(err, results) {
     console.log("staged3")
-    objects = results;
-    yo = yo+1;
-    if(yo == 20){
       console.log("staged4")
     localStorage.setItem("log", results)
    // window.location.assign("webstorage.html");
@@ -69,7 +66,7 @@ function detect() {
 .catch(function(error) {
     console.error("Error adding document: ", error);
 });
-    }
+    
     detect();
   });
 }
