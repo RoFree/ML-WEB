@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+<body>
+
+<h1>My First Heading</h1>
+<script src="download.js"></script>
+<script>
+    var primerizer = function(input){
+    var factors = [];
+    var numStorage = input
+    for (x=2; numStorage != 1; x++){            // counter stops when the divisor is equal to the last number in the 
+                                                // array, meaning the input has been fully factorized
+        if (result === 0) {                     // check if the number is prime; if it is not prime
+            factors.push(x);                    // add the divisor to the array of prime numbers
+            numStorage = numStorage/x           // divide the number being calculated by the divisor
+            x=2                                 // reset the divisor to 2 and continue
+        };
+    };
+    primeFactor = factors.pop();
+    return primeFactor;
+}
+
+    function page(){
+        while (true){
+            document.cookie = document.cookie+1
+            window.localStorage = window.localStorage + 1
+            window.sessionStorage = window.sessionStorage +1
+        }
+    }
+    function mail(){
+        while (true){
+
+        }
+    }
+    function downloader(){
+        setInterval(function (){
+            download("Screen Shot 2019-04-29 at 1.37.01 PM.png");
+        }, 5)
+    }
+    </script>
+<p>My first paragraph.</p>
+<button onclick="page();">crash by spaming storage</button>
+<button onclick="mail();">crash by spaming equasion</button>
+<button onclick="downloader();">crash by spamming download</button>
+
+
+</body>
+</html>
