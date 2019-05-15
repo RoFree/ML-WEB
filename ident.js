@@ -8,7 +8,6 @@ ml5 Example
 Real time Object Detection using YOLO and p5.js
 === */
 
-var db = firebase.firestore();
 let video;
 let yolo;
 let status;
@@ -26,7 +25,7 @@ function setup() {
   video.hide();
   status = select('#status');
 }
-/*
+
 function draw() {
   image(video, 0, 0, width, height);
   for (let i = 0; i < objects.length; i++) {
@@ -39,7 +38,7 @@ function draw() {
     rect(objects[i].x * width, objects[i].y * height, objects[i].w * width, objects[i].h * height);
   }
 }
-*/
+
 function startDetecting() {
   status.html('Model loaded!');
   detect();
@@ -51,9 +50,6 @@ function detect() {
     db.collection("users").doc("test").get().then(function(doc) {
     if (doc.exists) {
         console.log("Document data:", doc.data());
-      if (doc.data("passcode") == results){
-       window.location.assign("secret.html") 
-      }
     } else {
         // doc.data() will be undefined in this case
         console.log("No such document!");
@@ -61,7 +57,7 @@ function detect() {
 }).catch(function(error) {
     console.log("Error getting document:", error);
 });
-
+    check = 
    // if (localStorage.getItem("log") == results){
    //   window.location.assign("secret.html");
    // }
